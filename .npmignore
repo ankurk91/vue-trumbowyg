@@ -1,0 +1,21 @@
+# Don't publish these files and folders
+/.idea/
+/.github/
+/examples/
+/docs/
+
+.babelrc
+.editorconfig
+.eslintignore
+.eslintrc
+.gitattributes
+/.gitignore
+.npmignore
+
+bower.json
+npm-shrinkwrap.json
+package-lock.json
+yarn.lock
+
+webpack.config.dev.js
+webpack.config.js
