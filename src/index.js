@@ -1,4 +1,4 @@
-import component from './trumbowyg.vue';
+import component from './component.vue';
 
 const plugin = {
   install: function (Vue, options) {

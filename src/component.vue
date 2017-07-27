@@ -14,7 +14,7 @@
 <script type="text/javascript">
   const jQuery = window.jQuery || require("jquery");
 
-  import 'trumbowyg/dist/trumbowyg';
+  import 'trumbowyg';
   // You have to import css yourself
 
   // You may have to configure webpack to load svg files
