@@ -22,6 +22,8 @@ yarn add vue-trumbowyg
     - You can change editor value programmatically 
 * Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
 
+## Requirements
+* jQuery >=1.8 || ^3.2.1
     
 ## Usage
 ```html

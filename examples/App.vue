@@ -38,6 +38,7 @@
               v-model="form.body"
               name="body"
               :config="configs.advanced"
+              placeholder="Enter your content here"
               v-validate="{required:true}"></trumbowyg>
 
             <span v-show="errors.has('body')"
@@ -100,7 +101,7 @@
         // http://alex-d.github.io/Trumbowyg/documentation.html#basic-options
         configs: {
           basic: {
-            autogrow: true
+            autogrow: false
           },
           advanced: {
             autogrow: true,
