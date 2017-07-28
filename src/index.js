@@ -1,8 +1,11 @@
 import component from './component.vue';
 
 const plugin = {
-  install: function (Vue, options) {
-    Vue.component('trumbowyg', component);
+  install: function (Vue, params) {
+    let name = 'trumbowyg';
+    if (typeof params === 'string') name = params;
+
+    Vue.component(name, component);
   }
 };
 
