@@ -22,7 +22,6 @@ module.exports = {
     'vue',
     'jquery',
     'trumbowyg',
-    'trumbowyg/dist/trumbowyg',
     'trumbowyg/dist/ui/icons.svg'
   ],
   output: {

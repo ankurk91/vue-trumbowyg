@@ -6,7 +6,7 @@
 [![github-tag](https://img.shields.io/github/tag/ankurk91/vue-trumbowyg.svg?maxAge=1800)](https://github.com/ankurk91/vue-trumbowyg/)
 [![license](https://img.shields.io/github/license/ankurk91/vue-trumbowyg.svg?maxAge=1800)]()
 
-Vue.js v2.x component for [Trumbowyg](https://alex-d.github.com/Trumbowyg) rich text editor
+Vue.js v2.x component for [Trumbowyg](https://alex-d.github.com/Trumbowyg) WYSIWYG editor
 
 ## Installation
 ```bash

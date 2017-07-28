@@ -19,7 +19,7 @@ module.exports = {
   },
   entry: {
     app: './examples/index.js',
-    vendor: ['vue', 'jquery', 'bootstrap', 'trumbowyg/dist/trumbowyg']
+    vendor: ['vue', 'jquery', 'bootstrap', 'trumbowyg']
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
