@@ -78,8 +78,8 @@
       this.el.trumbowyg(Object.assign({svgPath: this.svgPath}, this.config));
       // set initial value
       this.el.trumbowyg('html', this.value);
-      // Watch for changes
-      this.el.trumbowyg().on('tbwchange', this.onChange);
+      // Watch for changes for further updates
+      this.el.on('tbwchange', this.onChange);
 
     },
     beforeDestroy() {
@@ -93,7 +93,7 @@
       /**
        * Listen to change from outside of component and update DOM
        *
-       * @param newValue
+       * @param newValue String
        */
       value(newValue) {
         this.el && this.el.trumbowyg('html', newValue)
@@ -106,7 +106,7 @@
        * @param event
        */
       onChange(event) {
-        this.el && this.$emit('input', this.el.trumbowyg('html'));
+        this.$emit('input', event.target.value);
       }
     }
   };
