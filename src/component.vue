@@ -78,8 +78,10 @@
       this.el.trumbowyg(Object.assign({svgPath: this.svgPath}, this.config));
       // set initial value
       this.el.trumbowyg('html', this.value);
+
       // Watch for changes for further updates
       this.el.on('tbwchange', this.onChange);
+      this.el.on('tbwblur', this.onBlur);
 
     },
     beforeDestroy() {
@@ -101,13 +103,24 @@
     },
     methods: {
       /**
-       * Update v-model upon change triggered by editor itself
+       * Emit change event with current editor value
+       * This event allows you to capture value in real-time
        *
        * @param event
        */
       onChange(event) {
+        this.$emit('change', event.target.value);
+      },
+
+      /**
+       * Update v-model on blur event
+       * Let's not update value in real-time
+       *
+       * @param event
+       */
+      onBlur(event) {
         this.$emit('input', event.target.value);
-      }
+      },
     }
   };
 </script>
