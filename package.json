@@ -1,6 +1,6 @@
 {
   "name": "vue-trumbowyg",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vue.js component for trumbowyg WYSIWYG editor",
   "main": "dist/vue-trumbowyg.min.js",
   "unpkg": "dist/vue-trumbowyg.min.js",
