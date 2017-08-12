@@ -82,7 +82,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'examples'),
     port: 8080,
     host: 'localhost',
-    open: false, // https://github.com/webpack/webpack-dev-server/issues/960
+    open: true,
     inline: true,
     hot: true,
     noInfo: false,
