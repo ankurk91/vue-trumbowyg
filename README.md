@@ -112,7 +112,7 @@ The component accepts these props:
 
 ## Run examples on your localhost
 * Clone this repo
-* Make sure you have node-js >=6.10 and [yarn](https://yarnpkg.com) >=0.27.x
+* Make sure you have node-js >=6.10 and [yarn](https://yarnpkg.com) >=1.x
 * Install dependencies
 ``
 yarn install
