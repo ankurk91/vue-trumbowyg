@@ -15,7 +15,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
-    extensions: ['.js', '.jsx', '.json', '.vue'],
+    extensions: ['.js', '.json', '.vue'],
   },
   entry: {
     app: './examples/index.js',
@@ -69,9 +69,10 @@ module.exports = {
       }
     }),
     new webpack.ProvidePlugin({
-      Vue: 'vue',
+      Vue: ['vue/dist/vue.esm.js', 'default'],
       jQuery: 'jquery',
       $: 'jquery',
+      'window.jQuery': 'jquery',
     }),
     new webpack.optimize.CommonsChunkPlugin('vendor'),
     // Required when devServer.hot = true

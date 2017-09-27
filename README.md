@@ -87,7 +87,7 @@ The component accepts these props:
 <link href="https://unpkg.com/trumbowyg@2.7.0/dist/ui/trumbowyg.min.css" rel="stylesheet">
 
 <!-- Vue js -->
-<script src="https://unpkg.com/vue@2.4.1/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue@2.4.4/dist/vue.min.js"></script>
 <!-- Lastly add this package -->
 <script src="https://unpkg.com/vue-trumbowyg"></script>
 ```
@@ -109,6 +109,9 @@ The component accepts these props:
   });
 </script>
 ```
+
+## Troubleshoot
+* Read [setup guide](https://github.com/ankurk91/vue-trumbowyg/wiki)
 
 ## Run examples on your localhost
 * Clone this repo
