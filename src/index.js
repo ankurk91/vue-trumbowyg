@@ -1,14 +1,12 @@
 import component from './component.vue';
 
-const plugin = {
-  install: function (Vue, params) {
-    let name = 'trumbowyg';
-    if (typeof params === 'string') name = params;
+const trumbowygPlugin = (Vue, params) => {
+  let name = 'trumbowyg';
+  if (typeof params === 'string') name = params;
 
-    Vue.component(name, component);
-  }
+  Vue.component(name, component);
 };
 
-component.install = plugin.install;
+component.install = trumbowygPlugin;
 
 export default component;

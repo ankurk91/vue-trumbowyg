@@ -3,6 +3,7 @@
 /.github/
 /examples/
 /docs/
+/test/
 
 .babelrc
 .editorconfig
@@ -19,3 +20,4 @@ yarn.lock
 
 webpack.config.dev.js
 webpack.config.js
+*.tgz

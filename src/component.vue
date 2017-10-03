@@ -21,6 +21,7 @@
   import icons from 'trumbowyg/dist/ui/icons.svg';
 
   export default {
+    name: 'trumbowyg',
     props: {
       value: {
         default: null,
@@ -64,6 +65,7 @@
     },
     data() {
       return {
+        // jQuery DOM
         el: null,
       }
     },
