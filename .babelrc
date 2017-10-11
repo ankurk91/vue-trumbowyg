@@ -6,7 +6,8 @@
         "modules": false,
         "targets": {
           "browsers": [
-            "> 2%"
+            "> 2%",
+            "last 2 versions"
           ],
           "uglify": true
         }

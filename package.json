@@ -1,6 +1,6 @@
 {
   "name": "vue-trumbowyg",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Vue.js component for trumbowyg WYSIWYG editor",
   "main": "dist/vue-trumbowyg.js",
   "unpkg": "dist/vue-trumbowyg.min.js",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/ankurk91/vue-trumbowyg",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: tests are coming soon.\" && exit 1",
     "lint": "eslint --ext .js,.vue --fix src",
     "start": "npm run dev",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config=webpack.config.dev.js",
