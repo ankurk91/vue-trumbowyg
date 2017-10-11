@@ -25,7 +25,8 @@
     "lint": "eslint --ext .js,.vue --fix src",
     "start": "npm run dev",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config=webpack.config.dev.js",
-    "build": "node ./node_modules/webpack/bin/webpack.js --hide-modules -p --progress"
+    "build": "node ./node_modules/webpack/bin/webpack.js --hide-modules -p --progress",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "trumbowyg": "^2.7.1"
@@ -33,6 +34,7 @@
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.6.0",
     "bootstrap": "^3.3.7",
     "clean-webpack-plugin": "^0.1.16",
