@@ -25,7 +25,7 @@
       value: {
         default: null,
         required: true,
-        validate(value) {
+        validator(value) {
           return value === null || typeof value === 'string' || value instanceof String
         }
       },
