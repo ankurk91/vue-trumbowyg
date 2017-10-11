@@ -17,7 +17,7 @@
   // You have to import css yourself
 
   // You may have to configure webpack to load svg files
-  import icons from 'trumbowyg/dist/ui/icons.svg';
+  import iconsSvg from 'trumbowyg/dist/ui/icons.svg';
 
   export default {
     name: 'trumbowyg',
@@ -59,7 +59,7 @@
       },
       svgPath: {
         type: [String, Boolean],
-        default: icons,
+        default: iconsSvg,
       },
     },
     data() {
@@ -77,13 +77,11 @@
 
       // Init editor with config
       this.el.trumbowyg(Object.assign({svgPath: this.svgPath}, this.config));
-      // set initial value
+      // Set initial value
       this.el.trumbowyg('html', this.value);
 
       // Watch for changes for further updates
       this.el.on('tbwchange', this.onChange);
-      this.el.on('tbwblur', this.onBlur);
-
     },
     beforeDestroy() {
       // Free up memory
@@ -99,27 +97,22 @@
        * @param newValue String
        */
       value(newValue) {
-        this.el && this.el.trumbowyg('html', newValue)
+        if (this.el) {
+          // Prevent multiple input events
+          if (newValue === this.el.trumbowyg('html')) return;
+          this.el.trumbowyg('html', newValue)
+        }
       },
     },
     methods: {
       /**
-       * Emit change event with current editor value
-       * This event allows you to capture value in real-time
+       * Emit input event with current editor value
+       * This will update v-model on parent component
+       * This method gets called when value gets changed by editor itself
        *
        * @param event
        */
       onChange(event) {
-        this.$emit('change', event.target.value);
-      },
-
-      /**
-       * Update v-model on blur event
-       * Let's not update value in real-time
-       *
-       * @param event
-       */
-      onBlur(event) {
         this.$emit('input', event.target.value);
       },
     }
