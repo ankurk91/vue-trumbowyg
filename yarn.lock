@@ -4229,7 +4229,7 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-trumbowyg@^2.7.1:
+trumbowyg@^2.8.1:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/trumbowyg/-/trumbowyg-2.8.1.tgz#1bc05b32e760f8f28a49db63076d8bcb3bf072de"
 

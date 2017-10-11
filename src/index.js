@@ -10,3 +10,4 @@ const trumbowygPlugin = (Vue, params) => {
 component.install = trumbowygPlugin;
 
 export default component;
+export {trumbowygPlugin, component};
