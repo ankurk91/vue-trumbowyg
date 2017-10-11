@@ -3,6 +3,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -46,6 +47,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['./dist']),
+    new UnminifiedWebpackPlugin()
   ],
   devtool: false,
   performance: {

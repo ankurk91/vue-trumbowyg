@@ -2,7 +2,7 @@
   "name": "vue-trumbowyg",
   "version": "1.0.3",
   "description": "Vue.js component for trumbowyg WYSIWYG editor",
-  "main": "dist/vue-trumbowyg.min.js",
+  "main": "dist/vue-trumbowyg.js",
   "unpkg": "dist/vue-trumbowyg.min.js",
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "html-webpack-plugin": "^2.30.1",
     "jquery": "^3.2.1",
     "style-loader": "^0.18.2",
+    "unminified-webpack-plugin": "^1.4.1",
     "vee-validate": "^2.0.0-rc.12",
     "vue": "^2.4.2",
     "vue-loader": "^13.0.4",

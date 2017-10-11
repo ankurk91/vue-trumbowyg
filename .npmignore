@@ -4,6 +4,8 @@
 /examples/
 /docs/
 /test/
+/coverage/
+/__test__/
 
 .babelrc
 .editorconfig
