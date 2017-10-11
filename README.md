@@ -4,7 +4,7 @@
 [![downloads](https://img.shields.io/npm/dt/vue-trumbowyg.svg)](https://www.npmjs.com/package/vue-trumbowyg)
 [![npm-version](https://img.shields.io/npm/v/vue-trumbowyg.svg)](https://www.npmjs.com/package/vue-trumbowyg)
 [![github-tag](https://img.shields.io/github/tag/ankurk91/vue-trumbowyg.svg?maxAge=1800)](https://github.com/ankurk91/vue-trumbowyg/)
-[![license](https://img.shields.io/github/license/ankurk91/vue-trumbowyg.svg?maxAge=1800)]()
+[![license](https://img.shields.io/github/license/ankurk91/vue-trumbowyg.svg?maxAge=1800)](https://yarnpkg.com/en/package/vue-trumbowyg)
 
 Vue.js v2.x component for [Trumbowyg](https://alex-d.github.com/Trumbowyg) WYSIWYG editor
 
@@ -70,7 +70,7 @@ The component accepts these props:
 | v-model / value | String / null      | `null`                | Set or Get editor value |
 | config          | Object             | `{}`                  | Editor configuration [options](http://alex-d.github.io/Trumbowyg/documentation.html#basic-options)|
 | placeholder     | String             | `''`                  | Set placeholder on input |
-| input-class     | String / Object    | `''`                  | Add CSS class to input  |
+| input-class     | String / Object    | `'form-control input'`| Set CSS class to input  |
 | name            | String             | `editor`              | Set input field name  |
 | required        | Boolean            | `false`               | Make input field required |
 | disabled        | Boolean            | `false`               | Make input field disabled |
@@ -87,7 +87,7 @@ The component accepts these props:
 <link href="https://unpkg.com/trumbowyg@2.8.0/dist/ui/trumbowyg.min.css" rel="stylesheet">
 
 <!-- Vue js -->
-<script src="https://unpkg.com/vue@2.4.4/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue@2.4/dist/vue.min.js"></script>
 <!-- Lastly add this package -->
 <script src="https://unpkg.com/vue-trumbowyg"></script>
 ```

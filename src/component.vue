@@ -1,7 +1,6 @@
 <template>
 
-  <textarea class="form-control input"
-            :name="name"
+  <textarea :name="name"
             :id="id"
             :class="inputClass"
             :required="required"
@@ -41,7 +40,7 @@
       },
       inputClass: {
         type: [String, Object],
-        default: ''
+        default: 'form-control input'
       },
       name: {
         type: String,
