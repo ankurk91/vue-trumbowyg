@@ -87,7 +87,7 @@ The component accepts these props:
 <link href="https://unpkg.com/trumbowyg@2.8.1/dist/ui/trumbowyg.min.css" rel="stylesheet">
 
 <!-- Vue js -->
-<script src="https://unpkg.com/vue@2.4/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue@2.5/dist/vue.min.js"></script>
 <!-- Lastly add this package -->
 <script src="https://unpkg.com/vue-trumbowyg"></script>
 ```
@@ -127,7 +127,7 @@ yarn start
 * Open the demo page at ``http://localhost:8080``
 
 ## Changelog
-Changelog for each release can be found [here](CHANGELOG.md)
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## License
 [MIT](LICENSE.txt) License
