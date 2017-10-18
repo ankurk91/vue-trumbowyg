@@ -34,6 +34,7 @@
             <label>Basic example</label>
             <trumbowyg
               v-model="form.content"
+              class="form-control"
               :config="configs.basic"></trumbowyg>
           </div>
 
@@ -45,6 +46,7 @@
               name="body"
               :config="configs.advanced"
               placeholder="Enter your content here"
+              class="form-control"
               v-validate="{required:true}"></trumbowyg>
 
             <span v-show="errors.has('body')"

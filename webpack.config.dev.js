@@ -18,8 +18,7 @@ module.exports = {
     extensions: ['.js', '.json', '.vue'],
   },
   entry: {
-    app: './examples/index.js',
-    vendor: ['vue', 'jquery', 'bootstrap', 'trumbowyg']
+    app: './examples/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -74,14 +73,25 @@ module.exports = {
       $: 'jquery',
       'window.jQuery': 'jquery',
     }),
-    new webpack.optimize.CommonsChunkPlugin('vendor'),
+    // https://webpack.js.org/plugins/commons-chunk-plugin/
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: function (module) {
+        // This prevents stylesheet resources with the .css or .scss extension
+        // from being moved from their original chunk to the vendor chunk
+        if (module.resource && (/^.*\.(css|scss)$/).test(module.resource)) {
+          return false;
+        }
+        return module.context && module.context.indexOf("node_modules") !== -1;
+      }
+    }),
     // Required when devServer.hot = true
     new webpack.HotModuleReplacementPlugin(),
   ],
   // Dev server related configs
   devServer: {
     contentBase: path.resolve(__dirname, 'examples'),
-    port: 8080,
+    port: 8000,
     host: 'localhost',
     open: true,
     inline: true,

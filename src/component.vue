@@ -1,12 +1,6 @@
 <template>
 
-  <textarea :name="name"
-            :id="id"
-            :class="inputClass"
-            :required="required"
-            :placeholder="placeholder"
-            :disabled="disabled"
-  ></textarea>
+  <textarea></textarea>
 
 </template>
 
@@ -34,29 +28,7 @@
         type: Object,
         default: () => ({})
       },
-      placeholder: {
-        type: String,
-        default: ''
-      },
-      inputClass: {
-        type: [String, Object],
-        default: 'form-control input'
-      },
-      name: {
-        type: String,
-        default: 'editor'
-      },
-      required: {
-        type: Boolean,
-        default: false
-      },
-      disabled: {
-        type: Boolean,
-        default: false
-      },
-      id: {
-        type: String
-      },
+      // https://alex-d.github.io/Trumbowyg/documentation/#svg-icons
       svgPath: {
         type: [String, Boolean],
         default: iconsSvg,

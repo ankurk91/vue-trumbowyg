@@ -1,12 +1,14 @@
 # Vue-Trumbowyg
 
 [![vue-js](https://img.shields.io/badge/vue.js-2.x-brightgreen.svg?maxAge=604800)](https://vuejs.org/)
-[![downloads](https://img.shields.io/npm/dt/vue-trumbowyg.svg)](https://www.npmjs.com/package/vue-trumbowyg)
+[![downloads](https://img.shields.io/npm/dt/vue-trumbowyg.svg)](http://npm-stats.com/~packages/vue-trumbowyg)
 [![npm-version](https://img.shields.io/npm/v/vue-trumbowyg.svg)](https://www.npmjs.com/package/vue-trumbowyg)
 [![github-tag](https://img.shields.io/github/tag/ankurk91/vue-trumbowyg.svg?maxAge=1800)](https://github.com/ankurk91/vue-trumbowyg/)
 [![license](https://img.shields.io/github/license/ankurk91/vue-trumbowyg.svg?maxAge=1800)](https://yarnpkg.com/en/package/vue-trumbowyg)
 
 Vue.js v2.x component for [Trumbowyg](https://alex-d.github.com/Trumbowyg) WYSIWYG editor
+
+## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/p7xs2jkk/)
 
 ## Installation
 ```bash
@@ -29,7 +31,7 @@ yarn add vue-trumbowyg
 ```html
 <template>
   <div>
-    <trumbowyg v-model="content"></trumbowyg>
+    <trumbowyg v-model="content" class="form-control"></trumbowyg>
   </div>
 </template>
 
@@ -67,14 +69,9 @@ The component accepts these props:
 
 | Attribute       | Type               | Default               | Description      |
 | :---            |  :---:             | :---:                 | :---             |
-| v-model / value | String / null      | `null`                | Set or Get editor value |
+| v-model / value | String / null      | `null`                | Set or Get editor value (required)|
 | config          | Object             | `{}`                  | Editor configuration [options](http://alex-d.github.io/Trumbowyg/documentation.html#basic-options)|
-| placeholder     | String             | `''`                  | Set placeholder on input |
-| input-class     | String / Object    | `'form-control input'`| Set CSS class to input  |
-| name            | String             | `editor`              | Set input field name  |
-| required        | Boolean            | `false`               | Make input field required |
-| disabled        | Boolean            | `false`               | Make input field disabled |
-| id              | String             | `''`                  | Set input field id |
+| svg-path        | String, Boolean    | import `trumbowyg/dist/ui/icons.svg`   | Set [custom](https://alex-d.github.io/Trumbowyg/documentation/#svg-icons) svg icon file path|
 
 ## Install in non-module environments (without webpack)
 * Acquire required files
@@ -95,7 +92,7 @@ The component accepts these props:
 ```html
 <!-- index.html -->
 <div id="app">  
-   <trumbowyg v-model="content"></trumbowyg>  
+   <trumbowyg v-model="content" class="form-control"></trumbowyg>  
 </div>
 <script>
   //Initialize as global component
@@ -124,10 +121,11 @@ yarn install
 ``
 yarn start
 ``
-* Open the demo page at ``http://localhost:8080``
+* Open the demo page at ``http://localhost:8000``
 
 ## Changelog
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## License
 [MIT](LICENSE.txt) License
+
