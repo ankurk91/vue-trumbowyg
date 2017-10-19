@@ -1,24 +1,30 @@
 <template>
   <section class="container">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Vue.js trumbowyg Demo</a>
-        </div>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://www.npmjs.com/package/vue-trumbowyg" target="_blank"> npm</a></li>
-          <li><a href="https://github.com/ankurk91/vue-trumbowyg" target="_blank"> Github</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <span class="navbar-brand mb-0">Vue-trumbowyg Demo</span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.npmjs.com/package/vue-trumbowyg"
+               target="_blank"> npm</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ankurk91/vue-trumbowyg"
+               target="_blank"> Github</a></li>
         </ul>
       </div>
     </nav>
+    <p class="mb-2"></p>
 
     <div class="row">
       <div class="col-md-8">
 
         <div class="row">
           <div class="col-md-12">
-            <button class="btn btn-default" @click.prevent="setNewValue()">Set new value pragmatically</button>
+            <button class="btn btn-secondary" @click.prevent="setNewValue()">Set new value pragmatically</button>
           </div>
         </div>
 
@@ -32,7 +38,7 @@
           </div>
 
 
-          <div class="form-group" :class="{'has-error' : errors.has('body')}">
+          <div class="form-group">
             <label>Advanced example</label>
             <trumbowyg
               v-model="form.body"
@@ -42,7 +48,7 @@
               v-validate="{required:true}"></trumbowyg>
 
             <span v-show="errors.has('body')"
-                  class="help-block">{{ errors.first('body') }}</span>
+                  class="text-danger">{{ errors.first('body') }}</span>
 
           </div>
 
@@ -56,24 +62,24 @@
       </div>
 
       <aside class="col-md-4">
-        <div class="panel panel-info">
-          <div class="panel-heading"> Links</div>
-          <div class="panel-body">
+        <div class="card">
+          <div class="card-header">
+            Links
+          </div>
+          <div class="card-body">
             <ul>
               <li><a href="https://github.com/ankurk91/vue-trumbowyg" target="_blank">Github</a></li>
               <li><a href="https://www.npmjs.com/package/vue-trumbowyg" target="_blank">npm</a></li>
-              <li><a href="http://alex-d.github.io/Trumbowyg/" target="_blank">
-                Trumbowyg
-              </a></li>
+              <li><a href="http://alex-d.github.io/Trumbowyg/" rel="noreferrer" target="_blank">Trumbowyg docs</a></li>
               <li><a
                 href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en"
-                target="_blank">Vue.js Dev tools</a>
-              </li>
+                rel="noreferrer" target="_blank">Vue.js Dev tools</a></li>
               <li><a href="https://github.com/logaretm/vee-validate" target="_blank">vee-validate</a></li>
             </ul>
           </div>
         </div>
       </aside>
+
     </div>
 
 
