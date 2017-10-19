@@ -18,7 +18,7 @@ module.exports = {
     extensions: ['.js', '.json', '.vue']
   },
   entry: './src/index.js',
-  // Don't include them into library build
+  // Don't include these into library build
   externals: [
     'vue',
     'jquery',
@@ -37,6 +37,7 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
+        exclude: path.resolve(__dirname, 'node_modules'),
       },
       {
         test: /\.js$/,

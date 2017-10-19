@@ -1,12 +1,12 @@
 # Changelog
 
-### [3.0.0](https://github.com/ankurk91/vue-trumbowyg/compare/2.0.0...3.0.0) (unreleased)
+### [3.0.0](https://github.com/ankurk91/vue-trumbowyg/compare/2.0.0...3.0.0) (breaking)
 * Change:
     - `input-class` prop has been removed, you can always use Vue.js inbuilt [class](https://vuejs.org/v2/guide/class-and-style.html#With-Components) binding
     ```html
       <trumbowyg v-model="date" class="form-control input"></trumbowyg>
     ```
-    - Similarly `name`, `id`, `placeholder` and `required` props has been removed, you can still specify any number of attribute on component
+    - Similarly `name`, `id`, `placeholder` and `required` props has been removed, you can still specify any number of attributes on component
     ```html
       <trumbowyg v-model="date" name="editor" id="js-editor" placeholder="Type something" aria-required="true"></trumbowyg>
     ```
