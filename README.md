@@ -31,7 +31,7 @@ yarn add vue-trumbowyg
 ```html
 <template>
   <div>
-    <trumbowyg v-model="content" class="form-control"></trumbowyg>
+    <trumbowyg v-model="content" :config="config" class="form-control"></trumbowyg>
   </div>
 </template>
 
@@ -45,7 +45,10 @@ yarn add vue-trumbowyg
   export default {    
     data () {
       return {
-        content: '',       
+        content: '',
+        config: {
+          
+        }       
       }
     },
     components: {
@@ -71,7 +74,7 @@ The component accepts these props:
 | :---            |  :---:             | :---:                 | :---             |
 | v-model / value | String / null      | `null`                | Set or Get editor value (required)|
 | config          | Object             | `{}`                  | Editor configuration [options](http://alex-d.github.io/Trumbowyg/documentation.html#basic-options)|
-| svg-path        | String, Boolean    | import `trumbowyg/dist/ui/icons.svg`   | Set [custom](https://alex-d.github.io/Trumbowyg/documentation/#svg-icons) svg icon file path|
+| svg-path        | String, Boolean    | `import 'trumbowyg/dist/ui/icons.svg'`   | Set [custom](https://alex-d.github.io/Trumbowyg/documentation/#svg-icons) svg icon file path|
 
 ## Install in non-module environments (without webpack)
 * Acquire required files
@@ -101,7 +104,7 @@ The component accepts these props:
   new Vue({
     el: '#app',
     data: {
-      content: null
+      content: null,      
     },    
   });
 </script>

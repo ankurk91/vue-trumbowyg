@@ -47,6 +47,7 @@
               :config="configs.advanced"
               placeholder="Enter your content here"
               class="form-control"
+              @tbw-blur="listenToBlurEvent"
               v-validate="{required:true}"></trumbowyg>
 
             <span v-show="errors.has('body')"
@@ -141,6 +142,9 @@
       setNewValue() {
         console.log('Set new value');
         this.form.content = '<h3 class="bg-success">New content inserted</h3>';
+      },
+      listenToBlurEvent(event) {
+        console.log(event)
       }
     },
     mounted() {

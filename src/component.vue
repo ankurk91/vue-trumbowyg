@@ -10,8 +10,11 @@
   import 'trumbowyg';
   // You have to import css yourself
 
-  // You may have to configure webpack to load svg files
-  import iconsSvg from 'trumbowyg/dist/ui/icons.svg';
+  // You have to configure webpack to load svg files
+  import svgIcons from 'trumbowyg/dist/ui/icons.svg';
+
+  // https://alex-d.github.io/Trumbowyg/documentation/#events
+  const events = ['focus', 'blur', 'change', 'resize', 'paste', 'openfullscreen', 'closefullscreen', 'close'];
 
   export default {
     name: 'trumbowyg',
@@ -31,7 +34,7 @@
       // https://alex-d.github.io/Trumbowyg/documentation/#svg-icons
       svgPath: {
         type: [String, Boolean],
-        default: iconsSvg,
+        default: svgIcons,
       },
     },
     data() {
@@ -52,8 +55,10 @@
       // Set initial value
       this.el.trumbowyg('html', this.value);
 
-      // Watch for changes for further updates
+      // Watch for further changes
       this.el.on('tbwchange', this.onChange);
+      // Register events
+      this.registerEvents();
     },
     beforeDestroy() {
       // Free up memory
@@ -72,6 +77,7 @@
         if (this.el) {
           // Prevent multiple input events
           if (newValue === this.el.trumbowyg('html')) return;
+          // Set new value
           this.el.trumbowyg('html', newValue)
         }
       },
@@ -87,6 +93,17 @@
       onChange(event) {
         this.$emit('input', event.target.value);
       },
+
+      /**
+       * Emit all available events
+       */
+      registerEvents() {
+        events.forEach((name) => {
+          this.el.on(`tbw${name}`, (...args) => {
+            this.$emit(`tbw-${name}`, ...args);
+          });
+        })
+      }
     }
   };
 </script>
