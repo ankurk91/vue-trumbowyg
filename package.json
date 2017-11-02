@@ -22,7 +22,6 @@
   "homepage": "https://github.com/ankurk91/vue-trumbowyg",
   "scripts": {
     "test": "echo \"Error: tests are coming soon.\" && exit 1",
-    "lint": "eslint --ext .js,.vue --fix src",
     "start": "npm run dev",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config=webpack.config.dev.js",
     "build": "node ./node_modules/webpack/bin/webpack.js --hide-modules -p --progress",
