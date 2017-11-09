@@ -5,7 +5,7 @@
 </template>
 
 <script type="text/javascript">
-  const jQuery = window.jQuery || require("jquery");
+  import jQuery from 'jquery';
 
   import 'trumbowyg';
   // You have to import css yourself

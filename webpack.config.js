@@ -19,12 +19,16 @@ module.exports = {
   },
   entry: './src/index.js',
   // Don't include these into library build
-  externals: [
-    'vue',
-    'jquery',
-    'trumbowyg',
-    'trumbowyg/dist/ui/icons.svg'
-  ],
+  externals: {
+    'jquery': {
+      commonjs: 'jquery',
+      commonjs2: 'jquery',
+      amd: 'jquery',
+      root: 'jQuery'
+    },
+    'trumbowyg': 'trumbowyg',
+    'trumbowyg/dist/ui/icons.svg': 'trumbowyg/dist/ui/icons.svg'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'vue-trumbowyg.min.js',
