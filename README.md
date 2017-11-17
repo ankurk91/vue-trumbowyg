@@ -61,9 +61,9 @@ yarn add vue-trumbowyg
 #### As plugin
 ```js
   import Vue from 'vue';
-  import trumbowyg from 'vue-trumbowyg';
+  import VueTrumbowyg from 'vue-trumbowyg';
   import 'trumbowyg/dist/ui/trumbowyg.css';
-  Vue.use(trumbowyg);
+  Vue.use(VueTrumbowyg);
 ```
 This will register a global component `<trumbowyg>` 
 
@@ -80,11 +80,11 @@ The component accepts these props:
 * Acquire required files
 ```html
 <!-- Editor dependency-->
-<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/jquery@3.2/dist/jquery.min.js"></script>
 
 <!-- Editor itself -->
-<script src="https://unpkg.com/trumbowyg@2.8.1/dist/trumbowyg.min.js"></script>
-<link href="https://unpkg.com/trumbowyg@2.8.1/dist/ui/trumbowyg.min.css" rel="stylesheet">
+<script src="https://unpkg.com/trumbowyg@2.8/dist/trumbowyg.min.js"></script>
+<link href="https://unpkg.com/trumbowyg@2.8/dist/ui/trumbowyg.min.css" rel="stylesheet">
 
 <!-- Vue js -->
 <script src="https://unpkg.com/vue@2.5/dist/vue.min.js"></script>
