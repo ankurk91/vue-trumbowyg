@@ -83,8 +83,8 @@ The component accepts these props:
 <script src="https://unpkg.com/jquery@3.2/dist/jquery.min.js"></script>
 
 <!-- Editor itself -->
-<script src="https://unpkg.com/trumbowyg@2.8/dist/trumbowyg.min.js"></script>
-<link href="https://unpkg.com/trumbowyg@2.8/dist/ui/trumbowyg.min.css" rel="stylesheet">
+<script src="https://unpkg.com/trumbowyg@2.9/dist/trumbowyg.min.js"></script>
+<link href="https://unpkg.com/trumbowyg@2.9/dist/ui/trumbowyg.min.css" rel="stylesheet">
 
 <!-- Vue js -->
 <script src="https://unpkg.com/vue@2.5/dist/vue.min.js"></script>
