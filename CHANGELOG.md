@@ -1,5 +1,8 @@
 # Changelog
 
+### [3.1.2](https://github.com/ankurk91/vue-trumbowyg/compare/3.1.1...3.1.2) 
+* Internal: Use `jQuery.extend` instead of `Object.assign`
+    
 ### [3.1.1](https://github.com/ankurk91/vue-trumbowyg/compare/3.1.0...3.1.1) 
 * Fix: v-model was not being updated on paste event (Ctrl+V)
     
