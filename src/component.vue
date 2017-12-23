@@ -51,7 +51,7 @@
       this.el = jQuery(this.$el);
 
       // Init editor with config
-      this.el.trumbowyg(Object.assign({svgPath: this.svgPath}, this.config));
+      this.el.trumbowyg(jQuery.extend({}, {svgPath: this.svgPath}, this.config));
       // Set initial value
       this.el.trumbowyg('html', this.value);
 
