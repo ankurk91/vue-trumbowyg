@@ -7,7 +7,6 @@
 ### Pull requests guidelines
 * Checkout a topic branch from the relevant branch, and merge back against that branch.
 * It's OK to have multiple small commits as you work on the PR - we will let GitHub automatically squash it before merging.
-* Work in ``src`` folder never touch or commit in ``dist`` folder
 
 
 ### Development setup
