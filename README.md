@@ -6,7 +6,7 @@
 [![github-tag](https://img.shields.io/github/tag/ankurk91/vue-trumbowyg.svg?maxAge=1800)](https://github.com/ankurk91/vue-trumbowyg/)
 [![license](https://img.shields.io/github/license/ankurk91/vue-trumbowyg.svg?maxAge=1800)](https://yarnpkg.com/en/package/vue-trumbowyg)
 
-Vue.js v2.x component for [Trumbowyg](https://alex-d.github.com/Trumbowyg) WYSIWYG editor
+Vue.js v2.x component for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG editor
 
 ## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/p7xs2jkk/)
 
@@ -22,16 +22,18 @@ yarn add vue-trumbowyg
 ## Features
 * Reactive ``v-model`` value
     - You can change editor value programmatically 
+* Emits all possible [events](https://alex-d.github.io/Trumbowyg/documentation/#events)   
+* Supports most [plugins](https://alex-d.github.io/Trumbowyg/documentation/plugins/)
 * Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
 
 ## Requirements
-* jQuery >=1.8 || ^3.2.1
+* jQuery >=1.8 || ^3.3
     
 ## Usage
 ```html
 <template>
   <div>
-    <trumbowyg v-model="content" :config="config" class="form-control"></trumbowyg>
+    <trumbowyg v-model="content" :config="config" class="form-control" name="content"></trumbowyg>
   </div>
 </template>
 
@@ -67,6 +69,12 @@ yarn add vue-trumbowyg
 ```
 This will register a global component `<trumbowyg>` 
 
+### Events
+* You can listen to various events like this
+```html
+ <trumbowyg v-model="body" @tbw-blur="yourMethod"></trumbowyg>
+```
+
 ## Available props
 The component accepts these props:
 
@@ -80,7 +88,7 @@ The component accepts these props:
 * Acquire required files
 ```html
 <!-- Editor dependency-->
-<script src="https://unpkg.com/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/jquery@3.3/dist/jquery.min.js"></script>
 
 <!-- Editor itself -->
 <script src="https://unpkg.com/trumbowyg@2.9/dist/trumbowyg.min.js"></script>
