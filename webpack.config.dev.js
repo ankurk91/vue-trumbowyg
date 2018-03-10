@@ -51,6 +51,13 @@ module.exports = {
 
     ]
   },
+  // https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693
+  optimization: {
+    runtimeChunk: false,
+    splitChunks: {
+      chunks: 'all',
+    }
+  },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
@@ -71,18 +78,7 @@ module.exports = {
       $: 'jquery',
       'window.jQuery': 'jquery',
     }),
-    // https://webpack.js.org/plugins/commons-chunk-plugin/
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: function (module) {
-        // This prevents stylesheet resources with the .css or .scss extension
-        // from being moved from their original chunk to the vendor chunk
-        if (module.resource && (/^.*\.(css|scss)$/).test(module.resource)) {
-          return false;
-        }
-        return module.context && module.context.indexOf("node_modules") !== -1;
-      }
-    }),
+
     // Required when devServer.hot = true
     new webpack.HotModuleReplacementPlugin(),
   ],

@@ -53,10 +53,12 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['./dist']),
     new UnminifiedWebpackPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin(),
   ],
   devtool: false,
   performance: {
     hints: false,
+  },
+  stats: {
+    modules: false
   }
 };
