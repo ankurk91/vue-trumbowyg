@@ -1,5 +1,8 @@
 # Changelog
 
+### [3.2.0](https://github.com/ankurk91/vue-trumbowyg/compare/3.1.2...3.2.0) 
+* Internal: Upgrade build system to Webpack v4.x
+
 ### [3.1.2](https://github.com/ankurk91/vue-trumbowyg/compare/3.1.1...3.1.2) 
 * Internal: Use `jQuery.extend` instead of `Object.assign`
     

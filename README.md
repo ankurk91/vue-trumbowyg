@@ -49,7 +49,8 @@ yarn add vue-trumbowyg
       return {
         content: '',
         config: {
-          
+          // Any option from 
+          // https://alex-d.github.io/Trumbowyg/documentation/#basic-options
         }       
       }
     },
@@ -82,7 +83,7 @@ The component accepts these props:
 | :---            |  :---:             | :---:                 | :---             |
 | v-model / value | String / null      | `null`                | Set or Get editor value (required)|
 | config          | Object             | `{}`                  | Editor configuration [options](http://alex-d.github.io/Trumbowyg/documentation.html#basic-options)|
-| svg-path        | String, Boolean    | `import 'trumbowyg/dist/ui/icons.svg'`   | Set [custom](https://alex-d.github.io/Trumbowyg/documentation/#svg-icons) svg icon file path|
+| svg-path        | String, Boolean    | `import 'trumbowyg/dist/ui/icons.svg'`   | Set [custom](https://alex-d.github.io/Trumbowyg/documentation/#svg-icons) svg icon file URL|
 
 ## Install in non-module environments (without webpack)
 * Acquire required files
@@ -106,7 +107,7 @@ The component accepts these props:
    <trumbowyg v-model="content" class="form-control"></trumbowyg>  
 </div>
 <script>
-  //Initialize as global component
+  // Initialize as global component
   Vue.component('Trumbowyg', VueTrumbowyg.default);
   
   new Vue({
@@ -133,4 +134,3 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ## License
 [MIT](LICENSE.txt) License
-
