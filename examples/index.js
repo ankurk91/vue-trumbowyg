@@ -7,6 +7,7 @@ Vue.config.productionTip = false;
 // vee-validate is just for demo
 import VeeValidate from 'vee-validate';
 
+// http://vee-validate.logaretm.com/configuration.html#configuration
 Vue.use(VeeValidate);
 
 //  jQuery is required by bootstrap to work

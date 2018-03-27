@@ -15,6 +15,7 @@
 
   // https://alex-d.github.io/Trumbowyg/documentation/#events
   const events = ['focus', 'blur', 'change', 'resize', 'paste', 'openfullscreen', 'closefullscreen', 'close'];
+  const eventPrefix = 'tbw';
 
   export default {
     name: 'trumbowyg',
@@ -103,8 +104,8 @@
        */
       registerEvents() {
         events.forEach((name) => {
-          this.el.on(`tbw${name}`, (...args) => {
-            this.$emit(`tbw-${name}`, ...args);
+          this.el.on(`${eventPrefix}${name}`, (...args) => {
+            this.$emit(`${eventPrefix}-${name}`, ...args);
           });
         })
       }
