@@ -18,8 +18,13 @@ module.exports = {
     extensions: ['.js', '.json', '.vue']
   },
   entry: './src/index.js',
-  // Don't include these into library build
   externals: {
+    'vue': {
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue',
+      root: 'Vue'
+    },
     'jquery': {
       commonjs: 'jquery',
       commonjs2: 'jquery',
