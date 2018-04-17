@@ -57,10 +57,10 @@
       this.el.trumbowyg('html', this.value);
 
       // Watch for further changes
-      this.el.on('tbwchange', this.onChange);
+      this.el.on(`${eventPrefix}change`, this.onChange);
 
       // Workaround : trumbowyg does not trigger change event on Ctrl+V
-      this.el.on('tbwpaste', this.onChange);
+      this.el.on(`${eventPrefix}paste`, this.onChange);
 
       // Register events
       this.registerEvents();
