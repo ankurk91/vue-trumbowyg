@@ -14,7 +14,7 @@
   import svgIcons from 'trumbowyg/dist/ui/icons.svg';
 
   // https://alex-d.github.io/Trumbowyg/documentation/#events
-  const events = ['focus', 'blur', 'change', 'resize', 'paste', 'openfullscreen', 'closefullscreen', 'close'];
+  const events = ['init', 'focus', 'blur', 'change', 'resize', 'paste', 'openfullscreen', 'closefullscreen', 'close'];
   const eventPrefix = 'tbw';
 
   export default {

@@ -48,6 +48,7 @@
               placeholder="Enter your content here"
               class="form-control"
               @tbw-blur="listenToBlurEvent"
+              @tbw-init="listenToInitEvent"
               v-validate="{required:true}"></trumbowyg>
 
             <span v-show="errors.has('body')"
@@ -144,7 +145,10 @@
         this.form.content = '<h3 class="bg-success">New content inserted</h3>';
       },
       listenToBlurEvent(event) {
-        console.log(event)
+        console.log("listen to blur event")
+      },
+      listenToInitEvent(event) {
+        console.log("listen to init event")
       }
     },
     mounted() {
