@@ -1,5 +1,8 @@
 # Changelog
 
+### [3.3.0](https://github.com/ankurk91/vue-trumbowyg/compare/3.2.0...3.3.0) 
+* Add: `tbw-init` event, fixes [#14](https://github.com/ankurk91/vue-trumbowyg/issues/14)
+
 ### [3.2.0](https://github.com/ankurk91/vue-trumbowyg/compare/3.1.2...3.2.0) 
 * Internal: Upgrade build system to Webpack v4.x
 
