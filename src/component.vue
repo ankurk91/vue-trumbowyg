@@ -4,7 +4,7 @@
 
 </template>
 
-<script type="text/javascript">
+<script>
   import jQuery from 'jquery';
 
   import 'trumbowyg';
@@ -65,13 +65,6 @@
       // Register events
       this.registerEvents();
     },
-    beforeDestroy() {
-      // Free up memory
-      if (this.el) {
-        this.el.trumbowyg('destroy');
-        this.el = null;
-      }
-    },
     watch: {
       /**
        * Listen to change from outside of component and update DOM
@@ -109,6 +102,13 @@
           });
         })
       }
-    }
+    },
+    beforeDestroy() {
+      // Free up memory
+      if (this.el) {
+        this.el.trumbowyg('destroy');
+        this.el = null;
+      }
+    },
   };
 </script>
