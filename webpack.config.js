@@ -4,14 +4,13 @@ const webpack = require('webpack');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader');
+const {VueLoaderPlugin} = require('vue-loader');
 
 module.exports = {
   context: __dirname,
   resolve: {
     modules: [
-      path.resolve(__dirname, 'src'),
-      'node_modules'
+      path.resolve(__dirname, 'node_modules'),
     ],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',

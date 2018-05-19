@@ -3,14 +3,12 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader');
+const {VueLoaderPlugin} = require('vue-loader');
 
 module.exports = {
   context: __dirname,
   resolve: {
     modules: [
-      path.resolve(__dirname, 'src'),
-      path.resolve(__dirname, 'examples'),
       path.resolve(__dirname, 'node_modules'),
     ],
     alias: {
@@ -31,6 +29,7 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
+        exclude: path.resolve(__dirname, 'node_modules'),
       },
       {
         test: /\.js$/,
@@ -39,15 +38,35 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader',
+        use: [
+          {
+            loader: "style-loader",
+            options: {
+              sourceMap: true,
+            }
+          },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              minimize: false
+            }
+          },
+        ],
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$/i,
-        loader: 'file-loader?name=[name].[hash].[ext]',
+        loader: 'file-loader',
+        options: {
+          name: '[path][name]-[hash].[ext]',
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
-        loader: 'file-loader?name=[name].[ext]?[hash]',
+        loader: 'file-loader',
+        options: {
+          name: '[path][name]-[hash].[ext]',
+        }
       }
 
     ]
@@ -87,7 +106,7 @@ module.exports = {
   // Dev server related configs
   devServer: {
     contentBase: path.resolve(__dirname, 'examples'),
-    port: 8000,
+    port: 9000,
     host: 'localhost',
     open: true,
     inline: true,
@@ -97,6 +116,12 @@ module.exports = {
     stats: 'errors-only'
   },
   devtool: '#cheap-module-eval-source-map',
+  performance: {
+    hints: false,
+  },
+  stats: {
+    modules: false
+  }
 };
 
 
