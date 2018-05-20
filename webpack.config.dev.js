@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {VueLoaderPlugin} = require('vue-loader');
 
 module.exports = {
+  mode: 'development',
   context: __dirname,
   resolve: {
     modules: [
@@ -103,17 +104,15 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new VueLoaderPlugin(),
   ],
-  // Dev server related configs
-  devServer: {
-    contentBase: path.resolve(__dirname, 'examples'),
-    port: 9000,
+  // webpack-serve related configs
+  serve: {
     host: 'localhost',
+    port: 9000,
     open: true,
-    inline: true,
     hot: true,
-    noInfo: false,
-    quiet: false,
-    stats: 'errors-only'
+    logTime: true,
+    logLevel: 'info',
+    clipboard: false
   },
   devtool: '#cheap-module-eval-source-map',
   performance: {
