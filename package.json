@@ -28,8 +28,8 @@
   "scripts": {
     "test": "echo \"Error: tests are coming soon.\" && exit 1",
     "start": "npm run dev",
-    "dev": "node ./node_modules/webpack-serve/cli.js --config=webpack.config.dev.js",
-    "build": "node ./node_modules/webpack-command/lib/cli.js --mode production",
+    "dev": "cross-env NODE_ENV=development node ./node_modules/webpack-serve/cli.js --config=webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production node ./node_modules/webpack-command/lib/cli.js --mode production",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
@@ -41,6 +41,7 @@
     "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.1.1",
     "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.1.5",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^3.1.0",
