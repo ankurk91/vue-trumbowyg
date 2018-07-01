@@ -89,16 +89,16 @@ The component accepts these props:
 * Acquire required files
 ```html
 <!-- Editor dependency-->
-<script src="https://unpkg.com/jquery@3.3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3"></script>
 
 <!-- Editor itself -->
-<script src="https://unpkg.com/trumbowyg@2/dist/trumbowyg.min.js"></script>
-<link href="https://unpkg.com/trumbowyg@2/dist/ui/trumbowyg.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/trumbowyg@2"></script>
+<link href="https://cdn.jsdelivr.net/npm/trumbowyg@2/dist/ui/trumbowyg.min.css" rel="stylesheet">
 
 <!-- Vue js -->
-<script src="https://unpkg.com/vue@2.5/dist/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5"></script>
 <!-- Lastly add this package -->
-<script src="https://unpkg.com/vue-trumbowyg"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-trumbowyg@3"></script>
 ```
 * Use the component anywhere in your app like this
 ```html

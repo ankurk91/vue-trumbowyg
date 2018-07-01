@@ -3,7 +3,7 @@
   "version": "3.3.0",
   "description": "Vue.js component for trumbowyg WYSIWYG editor",
   "main": "dist/vue-trumbowyg.js",
-  "unpkg": "dist/vue-trumbowyg.min.js",
+  "browser": "dist/vue-trumbowyg.min.js",
   "files": [
     "src",
     "dist"
