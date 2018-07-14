@@ -99,9 +99,6 @@ module.exports = {
       $: 'jquery',
       'window.jQuery': 'jquery',
     }),
-
-    // Required when devServer.hot = true
-    new webpack.HotModuleReplacementPlugin(),
     new VueLoaderPlugin(),
   ],
   // webpack-serve related configs
