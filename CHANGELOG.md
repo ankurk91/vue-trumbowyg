@@ -1,5 +1,8 @@
 # Changelog
 
+### [3.4.0](https://github.com/ankurk91/vue-trumbowyg/compare/3.3.0...3.4.0) 
+* Add: `blur` event to work with validation libraries
+
 ### [3.3.0](https://github.com/ankurk91/vue-trumbowyg/compare/3.2.0...3.3.0) 
 * Add: `tbw-init` event, fixes [#14](https://github.com/ankurk91/vue-trumbowyg/issues/14)
 
