@@ -1,7 +1,5 @@
 <template>
-
   <textarea></textarea>
-
 </template>
 
 <script>
@@ -40,7 +38,9 @@
     },
     data() {
       return {
-        // jQuery DOM
+        /**
+         * @var jQuery DOM
+         */
         el: null,
       }
     },
@@ -52,32 +52,34 @@
       this.el = jQuery(this.$el);
 
       // Init editor with config
-      this.el.trumbowyg(jQuery.extend({}, {svgPath: this.svgPath}, this.config));
+      this.el.trumbowyg(jQuery.extend(true, {}, {svgPath: this.svgPath}, this.config));
       // Set initial value
       this.el.trumbowyg('html', this.value);
 
       // Watch for further changes
       this.el.on(`${eventPrefix}change`, this.onChange);
 
-      // Workaround : trumbowyg does not trigger change event on Ctrl+V
+      // Workaround: trumbowyg does not trigger change event on Ctrl+V
       this.el.on(`${eventPrefix}paste`, this.onChange);
+
+      // Blur event for validation libraries
+      this.el.on(`${eventPrefix}blur`, this.onBlur);
 
       // Register events
       this.registerEvents();
     },
     watch: {
       /**
-       * Listen to change from outside of component and update DOM
+       * Listen to change from parent component and update DOM
        *
        * @param newValue String
        */
       value(newValue) {
-        if (this.el) {
-          // Prevent multiple input events
-          if (newValue === this.el.trumbowyg('html')) return;
-          // Set new value
-          this.el.trumbowyg('html', newValue)
-        }
+        if (!this.el) return;
+        // Prevent multiple input events
+        if (newValue === this.el.trumbowyg('html')) return;
+        // Set new value
+        this.el.trumbowyg('html', newValue)
       },
     },
     methods: {
@@ -93,6 +95,15 @@
       },
 
       /**
+       * This event is different from tbw-blur event
+       *
+       * @param event
+       */
+      onBlur(event) {
+        this.$emit('blur', event.target.value);
+      },
+
+      /**
        * Emit all available events
        */
       registerEvents() {
@@ -103,12 +114,14 @@
         })
       }
     },
+    /**
+     * Release memory
+     */
     beforeDestroy() {
-      // Free up memory
-      if (this.el) {
-        this.el.trumbowyg('destroy');
-        this.el = null;
-      }
+      if (!this.el) return;
+      
+      this.el.trumbowyg('destroy');
+      this.el = null;
     },
   };
 </script>

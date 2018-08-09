@@ -8,7 +8,9 @@ Vue.config.productionTip = false;
 import VeeValidate from 'vee-validate';
 
 // http://vee-validate.logaretm.com/configuration.html#configuration
-Vue.use(VeeValidate);
+Vue.use(VeeValidate, {
+  events: 'input|blur'
+});
 
 //  jQuery is required by bootstrap to work
 window.$ = window.jQuery = require('jquery');
