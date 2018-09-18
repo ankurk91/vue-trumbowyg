@@ -6,7 +6,7 @@
 [![github-tag](https://img.shields.io/github/tag/ankurk91/vue-trumbowyg.svg?maxAge=1800)](https://github.com/ankurk91/vue-trumbowyg/)
 [![license](https://img.shields.io/github/license/ankurk91/vue-trumbowyg.svg?maxAge=1800)](https://yarnpkg.com/en/package/vue-trumbowyg)
 
-Vue.js v2.x component for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG editor
+Vue.js component for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG editor
 
 ## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/p7xs2jkk/)
 
@@ -98,24 +98,10 @@ The component accepts these props:
 <!-- Vue js -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5"></script>
 <!-- Lastly add this package -->
-<script src="https://cdn.jsdelivr.net/npm/vue-trumbowyg@3"></script>
-```
-* Use the component anywhere in your app like this
-```html
-<!-- index.html -->
-<div id="app">  
-   <trumbowyg v-model="content" class="form-control"></trumbowyg>  
-</div>
+<script src="https://cdn.jsdelivr.net/npm/vue-trumbowyg@3"></script><
 <script>
-  // Initialize as global component
+// Initialize as global component
   Vue.component('Trumbowyg', VueTrumbowyg.default);
-  
-  new Vue({
-    el: '#app',
-    data: {
-      content: null,      
-    },    
-  });
 </script>
 ```
 

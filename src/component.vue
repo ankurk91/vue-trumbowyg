@@ -12,7 +12,8 @@
   import svgIcons from 'trumbowyg/dist/ui/icons.svg';
 
   // https://alex-d.github.io/Trumbowyg/documentation/#events
-  const events = ['init', 'focus', 'blur', 'change', 'resize', 'paste', 'openfullscreen', 'closefullscreen', 'close'];
+  import events from './events';
+
   const eventPrefix = 'tbw';
 
   export default {
@@ -119,7 +120,7 @@
      */
     beforeDestroy() {
       if (!this.el) return;
-      
+
       this.el.trumbowyg('destroy');
       this.el = null;
     },
