@@ -1,104 +1,91 @@
 <template>
-  <section class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <span class="navbar-brand mb-0">Vue-trumbowyg Demo</span>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.npmjs.com/package/vue-trumbowyg"
-               target="_blank"> npm</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/ankurk91/vue-trumbowyg"
-               target="_blank"> Github</a></li>
-        </ul>
-      </div>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark shadow-sm">
+      <span class="navbar-brand mb-0">Vue.js Trumbowyg</span>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ankurk91/vue-trumbowyg"
+             target="_blank"> GitHub</a></li>
+      </ul>
     </nav>
-    <p class="mb-2"></p>
 
-    <div class="row">
-      <div class="col-md-8">
+    <main class="container my-3">
+      <div class="row">
+        <div class="col-md-8">
 
-        <div class="row">
-          <div class="col-md-12">
-            <button class="btn btn-secondary" @click.prevent="setNewValue()">Set new value pragmatically</button>
+          <div class="card mb-3">
+            <div class="card-body">
+              <button class="btn btn-secondary" @click.prevent="setNewValue()">Set new value pragmatically</button>
+            </div>
           </div>
+
+          <form method="post" action="/" @submit.prevent="submit()">
+
+            <div class="form-group">
+              <label>Basic example</label>
+              <trumbowyg
+                v-model="form.content"
+                class="form-control"
+                :config="configs.basic"></trumbowyg>
+            </div>
+
+            <div class="form-group">
+              <label>Advanced example</label>
+              <trumbowyg
+                v-model="form.body"
+                name="body"
+                :config="configs.advanced"
+                placeholder="Enter your content here"
+                class="form-control"
+                @tbw-blur="listenToBlurEvent"
+                @tbw-init="listenToInitEvent"
+                v-validate="{required:true}"></trumbowyg>
+
+              <span v-show="errors.has('body')"
+                    class="text-danger">{{ errors.first('body') }}</span>
+
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Validate form
+              </button>
+            </div>
+          </form>
         </div>
 
-        <form method="post" action="/" @submit.prevent="submit()">
-
-          <div class="form-group">
-            <label>Basic example</label>
-            <trumbowyg
-              v-model="form.content"
-              class="form-control"
-              :config="configs.basic"></trumbowyg>
+        <aside class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              Links
+            </div>
+            <div class="card-body">
+              <ul>
+                <li><a href="https://github.com/ankurk91/vue-trumbowyg" target="_blank">Github</a></li>
+                <li><a href="https://www.npmjs.com/package/vue-trumbowyg" target="_blank">npm</a></li>
+                <li><a href="http://alex-d.github.io/Trumbowyg/" rel="noreferrer" target="_blank">Trumbowyg docs</a>
+                </li>
+                <li><a href="https://github.com/logaretm/vee-validate" target="_blank">vee-validate</a></li>
+              </ul>
+            </div>
           </div>
-
-
-          <div class="form-group">
-            <label>Advanced example</label>
-            <trumbowyg
-              v-model="form.body"
-              name="body"
-              :config="configs.advanced"
-              placeholder="Enter your content here"
-              class="form-control"
-              @tbw-blur="listenToBlurEvent"
-              @tbw-init="listenToInitEvent"
-              v-validate="{required:true}"></trumbowyg>
-
-            <span v-show="errors.has('body')"
-                  class="text-danger">{{ errors.first('body') }}</span>
-
-          </div>
-
-          <hr>
-
-          <div class="form-group">
-            <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-ok"></i> Validate form</button>
-          </div>
-
-        </form>
+        </aside>
       </div>
-
-      <aside class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            Links
-          </div>
-          <div class="card-body">
-            <ul>
-              <li><a href="https://github.com/ankurk91/vue-trumbowyg" target="_blank">Github</a></li>
-              <li><a href="https://www.npmjs.com/package/vue-trumbowyg" target="_blank">npm</a></li>
-              <li><a href="http://alex-d.github.io/Trumbowyg/" rel="noreferrer" target="_blank">Trumbowyg docs</a></li>
-              <li><a
-                href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en"
-                rel="noreferrer" target="_blank">Vue.js Dev tools</a></li>
-              <li><a href="https://github.com/logaretm/vee-validate" target="_blank">vee-validate</a></li>
-            </ul>
-          </div>
-        </div>
-      </aside>
-
-    </div>
-
-
-  </section>
+    </main>
+    <footer class="text-center text-muted small mb-3 mt-1">
+      Created by <a href="https://twitter.com/ankurk91" target="_blank" rel="noopener">@ankurk91</a>
+    </footer>
+  </div>
 </template>
 
 <script>
   import Vue from 'vue';
 
-  import trumbowyg from '../src/index';
-  import 'trumbowyg/dist/ui/trumbowyg.css';
+  import Trumbowyg from '../src/index.js';
+  import 'trumbowyg/dist/ui/trumbowyg.min.css';
 
   // Plugins are optional
-  import 'trumbowyg/dist/plugins/colors/trumbowyg.colors'
-  import 'trumbowyg/dist/plugins/colors/ui/trumbowyg.colors.css'
+  import 'trumbowyg/dist/plugins/colors/trumbowyg.colors.js'
+  import 'trumbowyg/dist/plugins/colors/ui/trumbowyg.colors.min.css'
 
   export default {
     name: 'app',
@@ -128,7 +115,7 @@
       }
     },
     components: {
-      trumbowyg
+      Trumbowyg
     },
     methods: {
       submit() {
@@ -136,7 +123,6 @@
         console.log(this.form);
         // http://vee-validate.logaretm.com/examples.html#component-example
         this.$validator.validateAll().then(result => {
-          // eslint-disable-next-line
           alert(`Validation Result: ${result}`);
         });
       },
@@ -151,8 +137,10 @@
         console.log("listen to init event")
       }
     },
-    mounted() {
-
-    }
   }
 </script>
+<style>
+  .trumbowyg-box, .trumbowyg-editor {
+    margin: 0;
+  }
+</style>

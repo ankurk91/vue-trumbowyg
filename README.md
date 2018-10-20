@@ -39,7 +39,7 @@ yarn add vue-trumbowyg
 
 <script>  
   // Import this component
-  import trumbowyg from 'vue-trumbowyg';
+  import Trumbowyg from 'vue-trumbowyg';
   
   // Import editor css
   import 'trumbowyg/dist/ui/trumbowyg.css';
@@ -47,15 +47,15 @@ yarn add vue-trumbowyg
   export default {    
     data () {
       return {
-        content: '',
+        content: null,
         config: {
-          // Any option from 
-          // https://alex-d.github.io/Trumbowyg/documentation/#basic-options
+          // Get options from 
+          // https://alex-d.github.io/Trumbowyg/documentation
         }       
       }
     },
     components: {
-      trumbowyg
+      Trumbowyg
     }
   }
 </script>
@@ -82,13 +82,13 @@ The component accepts these props:
 | Attribute       | Type               | Default               | Description      |
 | :---            |  :---:             | :---:                 | :---             |
 | v-model / value | String / null      | `null`                | Set or Get editor value (required)|
-| config          | Object             | `{}`                  | Editor configuration [options](http://alex-d.github.io/Trumbowyg/documentation.html#basic-options)|
+| config          | Object             | `{}`                  | Editor configuration [options](http://alex-d.github.io/Trumbowyg/documentation.html)|
 | svg-path        | String, Boolean    | `import 'trumbowyg/dist/ui/icons.svg'`   | Set [custom](https://alex-d.github.io/Trumbowyg/documentation/#svg-icons) svg icon file URL|
 
 ## Install in non-module environments (without webpack)
 * Acquire required files
 ```html
-<!-- Editor dependency-->
+<!-- Editor dependencies-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3"></script>
 
 <!-- Editor itself -->
@@ -100,7 +100,7 @@ The component accepts these props:
 <!-- Lastly add this package -->
 <script src="https://cdn.jsdelivr.net/npm/vue-trumbowyg@3"></script><
 <script>
-// Initialize as global component
+  // Initialize as global component
   Vue.component('Trumbowyg', VueTrumbowyg.default);
 </script>
 ```
