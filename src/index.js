@@ -1,4 +1,4 @@
-import component from './component.vue';
+import component from './component.js';
 
 const trumbowygPlugin = (Vue, params) => {
   let name = 'trumbowyg';
