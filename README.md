@@ -86,7 +86,6 @@ The component accepts these props:
 | svg-path        | String, Boolean    | `import 'trumbowyg/dist/ui/icons.svg'`   | Set [custom](https://alex-d.github.io/Trumbowyg/documentation/#svg-icons) svg icon file URL|
 
 ## Install in non-module environments (without webpack)
-* Acquire required files
 ```html
 <!-- Editor dependencies-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3"></script>
