@@ -28,7 +28,7 @@
   "scripts": {
     "test": "echo \"Error: tests are coming soon.\" && exit 1",
     "start": "yarn run dev",
-    "dev": "cross-env NODE_ENV=development webpack-serve --config=webpack.config.dev.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --hot --config=webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --progress --mode production",
     "prepublishOnly": "yarn run build"
   },
@@ -54,7 +54,7 @@
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
-    "webpack-serve": "^2.0.2"
+    "webpack-dev-server": "^3.1.10"
   },
   "peerDependencies": {
     "jquery": ">=1.8",
