@@ -41,6 +41,9 @@ module.exports = {
     library: 'VueTrumbowyg',
     libraryTarget: 'umd',
     umdNamedDefine: true,
+    // Workaround to fix umd build, restore webpack v3 behaviour
+    // https://github.com/webpack/webpack/issues/6642
+    globalObject: "typeof self !== 'undefined' ? self : this"
   },
   module: {
     rules: [
@@ -81,6 +84,8 @@ module.exports = {
     hints: false,
   },
   stats: {
-    modules: false
+    modules: false,
+    children: false,
+    entrypoints: false,
   }
 };

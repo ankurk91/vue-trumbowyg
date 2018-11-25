@@ -15,7 +15,7 @@ Vue.js component for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG ed
 # npm
 npm install vue-trumbowyg --save
 
-# Yarn
+# yarn
 yarn add vue-trumbowyg
 ```
 
