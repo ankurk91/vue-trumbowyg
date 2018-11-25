@@ -1,3 +1,4 @@
+// Need full jQuery build
 import jQuery from 'jquery';
 
 import 'trumbowyg';
@@ -57,9 +58,6 @@ export default {
 
     // Watch for further changes
     this.el.on(`${eventPrefix}change`, this.onChange);
-
-    // Workaround: trumbowyg does not trigger change event on Ctrl+V
-    this.el.on(`${eventPrefix}paste`, this.onChange);
 
     // Blur event for validation libraries
     this.el.on(`${eventPrefix}blur`, this.onBlur);
