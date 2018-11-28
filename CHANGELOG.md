@@ -1,5 +1,10 @@
 # Changelog
 
+### [3.4.1](https://github.com/ankurk91/vue-trumbowyg/compare/3.4.0...3.4.1) 
+* Change: 
+    - convert template to render function to reduce build size
+    - remove the workaround to update `v-model` on paste event, because `trumbowyg` is now handling it internally
+
 ### [3.4.0](https://github.com/ankurk91/vue-trumbowyg/compare/3.3.0...3.4.0) 
 * Add: `blur` event to work with validation libraries
 
