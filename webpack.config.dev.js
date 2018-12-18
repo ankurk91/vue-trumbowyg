@@ -48,7 +48,6 @@ module.exports = {
             loader: "css-loader",
             options: {
               sourceMap: true,
-              minimize: false
             }
           },
         ],
@@ -57,14 +56,14 @@ module.exports = {
         test: /\.jpe?g$|\.gif$|\.png$/i,
         loader: 'file-loader',
         options: {
-          name: '[path][name]-[hash].[ext]',
+          name: '[path][name]-[hash:8].[ext]',
         }
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
         loader: 'file-loader',
         options: {
-          name: '[path][name]-[hash].[ext]',
+          name: '[path][name]-[hash:8].[ext]',
         }
       }
 
