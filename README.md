@@ -94,7 +94,7 @@ The component accepts these props:
 <link href="https://cdn.jsdelivr.net/npm/trumbowyg@2/dist/ui/trumbowyg.min.css" rel="stylesheet">
 
 <!-- Vue js -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
 <!-- Lastly add this package -->
 <script src="https://cdn.jsdelivr.net/npm/vue-trumbowyg@3"></script><
 <script>
