@@ -12,7 +12,7 @@ Vue.js component for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG ed
 ## Installation
 ```bash
 # npm
-npm install vue-trumbowyg --save
+npm install vue-trumbowyg 
 
 # yarn
 yarn add vue-trumbowyg
@@ -23,7 +23,7 @@ yarn add vue-trumbowyg
     - You can change editor value programmatically 
 * Emits all possible [events](https://alex-d.github.io/Trumbowyg/documentation/#events)   
 * Supports most [plugins](https://alex-d.github.io/Trumbowyg/documentation/plugins/)
-* Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
+* Works with validation libraries like - [vee-validate](https://github.com/logaretm/vee-validate) 
 
 ## Requirements
 * jQuery >=1.8 

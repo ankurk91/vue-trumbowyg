@@ -1,5 +1,8 @@
 # Changelog
 
+### [3.4.2](https://github.com/ankurk91/vue-trumbowyg/compare/3.4.1...3.4.2) 
+* Change: specify jQuery as dependency
+
 ### [3.4.1](https://github.com/ankurk91/vue-trumbowyg/compare/3.4.0...3.4.1) 
 * Change: 
     - convert template to render function to reduce build size
