@@ -7,7 +7,7 @@
 
 Vue.js component for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG editor
 
-## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/p7xs2jkk/)
+## [Demo](https://ankurk91.github.io/vue-trumbowyg/) or [JSFiddle](https://jsfiddle.net/ankurk91/p7xs2jkk/)
 
 ## Installation
 ```bash

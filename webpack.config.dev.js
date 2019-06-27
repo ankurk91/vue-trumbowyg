@@ -4,6 +4,11 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {VueLoaderPlugin} = require('vue-loader');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   mode: 'development',
@@ -38,12 +43,13 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          {
-            loader: "style-loader",
-            options: {
-              sourceMap: true,
-            }
-          },
+          isProduction ? MiniCssExtractPlugin.loader :
+            {
+              loader: "style-loader",
+              options: {
+                sourceMap: true,
+              }
+            },
           {
             loader: "css-loader",
             options: {
@@ -56,14 +62,14 @@ module.exports = {
         test: /\.jpe?g$|\.gif$|\.png$/i,
         loader: 'file-loader',
         options: {
-          name: '[path][name]-[hash:8].[ext]',
+          name: 'img/[name]-[hash:8].[ext]',
         }
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
         loader: 'file-loader',
         options: {
-          name: '[path][name]-[hash:8].[ext]',
+          name: 'fonts/[name]-[hash:8].[ext]',
         }
       }
 
@@ -74,7 +80,8 @@ module.exports = {
     runtimeChunk: false,
     splitChunks: {
       chunks: 'all',
-    }
+    },
+    minimizer: []
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -110,7 +117,7 @@ module.exports = {
     },
     stats: 'errors-only',
   },
-  devtool: '#cheap-module-eval-source-map',
+  devtool: isProduction ? false : '#cheap-module-eval-source-map',
   performance: {
     hints: false,
   },
@@ -121,4 +128,28 @@ module.exports = {
   }
 };
 
+if (isProduction) {
+  module.exports.plugins.push(
+    new CleanWebpackPlugin({
+      cleanStaleWebpackAssets: false,
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name]-[hash].css',
+    }),
+  );
+  module.exports.optimization.minimizer.push(
+    new TerserPlugin({
+      sourceMap: false,
+      terserOptions: {
+        output: {
+          beautify: false,
+        },
+        compress: {
+          drop_debugger: true,
+          drop_console: true
+        }
+      }
+    }),
+  );
+}
 
