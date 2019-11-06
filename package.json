@@ -43,19 +43,19 @@
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.3.1",
     "clean-webpack-plugin": "^3.0.0",
-    "cross-env": "^5.1.6",
+    "cross-env": "^6.0.3",
     "css-loader": "^3.0.0",
     "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.1.0",
-    "mini-css-extract-plugin": "^0.7.0",
-    "style-loader": "^0.23.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "style-loader": "^1.0.0",
     "unminified-webpack-plugin": "^2.0.0",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.33.0",
+    "webpack": "^4.41.2",
     "webpack-cli": "^3.3.4",
-    "webpack-dev-server": "^3.7.1"
+    "webpack-dev-server": "^3.9.0"
   },
   "peerDependencies": {
     "vue": "^2.0.0"
