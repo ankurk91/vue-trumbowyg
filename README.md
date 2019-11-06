@@ -11,11 +11,11 @@ Vue.js component for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG ed
 
 ## Installation
 ```bash
-# npm
-npm install vue-trumbowyg 
-
 # yarn
 yarn add vue-trumbowyg
+
+# npm
+npm install vue-trumbowyg 
 ```
 
 ## Features

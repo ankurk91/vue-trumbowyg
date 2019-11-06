@@ -5183,11 +5183,6 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vee-validate@^2.2.10:
-  version "2.2.10"
-  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-2.2.10.tgz#c209b6fbcf3dd57f1c2a70d988bb8ff360b9a7a9"
-  integrity sha512-I48yS0Fvd7E7zCZpBgyyXlN2yUICyAIH6lHsyphTQ8gg/8BaTrgQOAdznSsB85qdS+tOJpJa/adwgk9Nyw3mSA==
-
 vm-browserify@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"

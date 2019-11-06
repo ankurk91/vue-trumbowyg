@@ -4,14 +4,6 @@ import Vue from 'vue';
 
 Vue.config.productionTip = false;
 
-// vee-validate is just for demo
-import VeeValidate from 'vee-validate';
-
-// http://vee-validate.logaretm.com/configuration.html#configuration
-Vue.use(VeeValidate, {
-  events: 'input|blur'
-});
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App.vue';

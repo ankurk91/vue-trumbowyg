@@ -39,15 +39,11 @@
                 class="form-control"
                 @tbw-blur="listenToBlurEvent"
                 @tbw-init="listenToInitEvent"
-                v-validate="{required:true}"></trumbowyg>
-
-              <span v-show="errors.has('body')"
-                    class="text-danger">{{ errors.first('body') }}</span>
-
+              ></trumbowyg>
             </div>
 
             <div class="form-group">
-              <button class="btn btn-primary" type="submit">Validate form
+              <button class="btn btn-primary" type="submit">Submit form
               </button>
             </div>
           </form>
@@ -64,7 +60,6 @@
                 <li><a href="https://www.npmjs.com/package/vue-trumbowyg" target="_blank">npm</a></li>
                 <li><a href="http://alex-d.github.io/Trumbowyg/" rel="noreferrer" target="_blank">Trumbowyg docs</a>
                 </li>
-                <li><a href="https://github.com/logaretm/vee-validate" target="_blank">vee-validate</a></li>
               </ul>
             </div>
           </div>
@@ -119,12 +114,7 @@
     },
     methods: {
       submit() {
-        console.log('Form submit event');
-        console.log(this.form);
-        // http://vee-validate.logaretm.com/examples.html#component-example
-        this.$validator.validateAll().then(result => {
-          alert(`Validation Result: ${result}`);
-        });
+        console.log('Form submit event', this.form);
       },
       setNewValue() {
         console.log('Set new value');
