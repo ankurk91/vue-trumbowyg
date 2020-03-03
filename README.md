@@ -70,10 +70,11 @@ npm install vue-trumbowyg
 This will register a global component `<trumbowyg>` 
 
 ### Events
-* You can listen to various events like this
+* You can listen to various [events](https://alex-d.github.io/Trumbowyg/documentation/#events) like this
 ```html
  <trumbowyg v-model="body" @tbw-blur="yourMethod"></trumbowyg>
 ```
+* :bulb: Events names are prefixed with `tbw` and separated with a dash, for example: `tbw-focus`
 
 ## Available props
 The component accepts these props:
