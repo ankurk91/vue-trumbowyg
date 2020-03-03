@@ -115,6 +115,7 @@
     methods: {
       submit() {
         console.log('Form submit event', this.form);
+        alert("Form submitted.")
       },
       setNewValue() {
         console.log('Set new value');

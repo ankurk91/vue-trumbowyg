@@ -1,5 +1,8 @@
 # Changelog
 
+### [3.5.0](https://github.com/ankurk91/vue-trumbowyg/compare/3.4.2...3.5.0) 
+* Add new events to the list
+
 ### [3.4.2](https://github.com/ankurk91/vue-trumbowyg/compare/3.4.1...3.4.2) 
 * Change: specify jQuery as dependency
 
