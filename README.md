@@ -88,7 +88,7 @@ The component accepts these props:
 ## Install in non-module environments (without webpack)
 ```html
 <!-- Editor dependencies-->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4"></script>
 
 <!-- Editor itself -->
 <script src="https://cdn.jsdelivr.net/npm/trumbowyg@2"></script>
@@ -109,7 +109,7 @@ The component accepts these props:
 
 ## Run examples on your localhost
 * Clone this repo
-* Make sure you have node-js `>=8` and [yarn](https://yarnpkg.com) `>=1.x` pre-installed
+* Make sure you have node-js `>=8.9` and [yarn](https://yarnpkg.com) `>=1.x` pre-installed
 * Install dependencies - `yarn install`
 * Run webpack dev server - `yarn start`
 * This should open the demo page at `http://localhost:9000` in your default web browser 

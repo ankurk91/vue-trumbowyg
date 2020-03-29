@@ -81,6 +81,7 @@
   // Plugins are optional
   import 'trumbowyg/dist/plugins/colors/trumbowyg.colors.js'
   import 'trumbowyg/dist/plugins/colors/ui/trumbowyg.colors.min.css'
+  import 'trumbowyg/dist/plugins/pasteembed/trumbowyg.pasteembed.js'
 
   export default {
     name: 'app',
