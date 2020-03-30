@@ -35,6 +35,10 @@ export default {
       type: [String, Boolean],
       default: svgIcons,
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
@@ -78,6 +82,10 @@ export default {
       // Set new value
       this.el.trumbowyg('html', newValue)
     },
+    disabled(newValue) {
+      let method = newValue ? 'disable' : 'enable';
+      this.el.trumbowyg(method);
+    }
   },
   methods: {
     /**

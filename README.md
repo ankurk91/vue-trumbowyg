@@ -82,6 +82,7 @@ The component accepts these props:
 | Attribute       | Type               | Default               | Description      |
 | :---            |  :---:             | :---:                 | :---             |
 | v-model / value | String / null      | `null`                | Set or Get editor value (required)|
+| disabled        | Boolean            | `false`               | Enable/disable editor |
 | config          | Object             | `{}`                  | Editor configuration [options](http://alex-d.github.io/Trumbowyg/documentation.html)|
 | svg-path        | String, Boolean    | `import 'trumbowyg/dist/ui/icons.svg'`   | Set [custom](https://alex-d.github.io/Trumbowyg/documentation/#svg-icons) svg icon file URL|
 
