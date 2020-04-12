@@ -88,7 +88,7 @@
     data() {
       return {
         form: {
-          content: '<h1>Default text</h1>',
+          content: '<h1>Preloaded content</h1>',
           body: null,
         },
         // http://alex-d.github.io/Trumbowyg/documentation.html#basic-options
