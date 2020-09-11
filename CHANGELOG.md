@@ -1,5 +1,8 @@
 # Changelog
 
+### [3.6.1](https://github.com/ankurk91/vue-trumbowyg/compare/3.6.0...3.6.1) 
+* Fix: `disabled` prop initial value not being reflected
+
 ### [3.6.0](https://github.com/ankurk91/vue-trumbowyg/compare/3.5.0...3.6.0) 
 * Add : `disabled` prop, [#26](https://github.com/ankurk91/vue-trumbowyg/issues/26)
 
