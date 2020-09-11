@@ -82,12 +82,9 @@ export default {
       // Set new value
       this.el.trumbowyg('html', newValue)
     },
-    disabled: {
-      handler: (newValue) => {
-        let method = newValue ? 'disable' : 'enable';
-        this.el.trumbowyg(method);
-      },
-      immediate: true
+    disabled(newValue) {
+      let method = newValue ? 'disable' : 'enable';
+      this.el.trumbowyg(method);
     }
   },
   methods: {
