@@ -66,6 +66,9 @@ export default {
     // Blur event for validation libraries
     this.el.on(`${eventPrefix}blur`, this.onBlur);
 
+    // Initial value for disabled prop
+    this.toggleDisabled(this.disabled);
+
     // Register events
     this.registerEvents();
   },
@@ -82,9 +85,9 @@ export default {
       // Set new value
       this.el.trumbowyg('html', newValue)
     },
+
     disabled(newValue) {
-      let method = newValue ? 'disable' : 'enable';
-      this.el.trumbowyg(method);
+      this.toggleDisabled(newValue)
     }
   },
   methods: {
@@ -117,6 +120,11 @@ export default {
           this.$emit(`${eventPrefix}-${name}`, ...args);
         });
       })
+    },
+
+    toggleDisabled(value) {
+      const method = value ? 'disable' : 'enable'
+      this.el.trumbowyg(method);
     }
   },
   /**
