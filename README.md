@@ -10,9 +10,7 @@ Vue.js component for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG ed
 
 ## [Demo](https://ankurk91.github.io/vue-trumbowyg/) or [JSFiddle](https://jsfiddle.net/ankurk91/p7xs2jkk/)
 
-
 ### Version matrix
-
 | Vue.js version | Package version | Branch          |
 | :---           | :---:           | ---:           | 
 | 2.x            | 3.x             | [3.x](https://github.com/ankurk91/vue-trumbowyg/tree/3.x) |
@@ -99,14 +97,14 @@ The component accepts these props:
 ## Install in non-module environments (without webpack)
 ```html
 <!-- Editor dependencies-->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.4"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5"></script>
 
 <!-- Editor itself -->
 <script src="https://cdn.jsdelivr.net/npm/trumbowyg@2"></script>
 <link href="https://cdn.jsdelivr.net/npm/trumbowyg@2/dist/ui/trumbowyg.min.css" rel="stylesheet">
 
 <!-- Vue js -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 <!-- Lastly add this package -->
 <script src="https://cdn.jsdelivr.net/npm/vue-trumbowyg@4"></script><
 <script>
