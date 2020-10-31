@@ -13,10 +13,10 @@ Vue.js component for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG ed
 ## Installation
 ```bash
 # yarn
-yarn add vue-trumbowyg
+yarn add vue-trumbowyg@^3
 
 # npm
-npm install vue-trumbowyg 
+npm install vue-trumbowyg@^3 
 ```
 
 ## Features
@@ -28,6 +28,7 @@ npm install vue-trumbowyg
 
 ## Requirements
 * jQuery >=1.8 
+* Vue 2.x
     
 ## Usage
 ```html
