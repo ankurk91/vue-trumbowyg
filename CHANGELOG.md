@@ -1,5 +1,8 @@
 # Changelog
 
+### [4.0.0](https://github.com/ankurk91/vue-trumbowyg/compare/3.6.2...4.0.0) 
+* Add support for Vue v3.x
+
 ### [3.6.2](https://github.com/ankurk91/vue-trumbowyg/compare/3.6.1...3.6.2) 
 * Fix: previous version
 

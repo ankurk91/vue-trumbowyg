@@ -14,8 +14,7 @@ mix.webpackConfig({
     }
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      Vue: ['vue/dist/vue.esm.js', 'default'],
+    new webpack.ProvidePlugin({    
       jQuery: 'jquery',
       $: 'jquery',
       'window.jQuery': 'jquery',

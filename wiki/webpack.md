@@ -4,6 +4,7 @@
 ```
 yarn add file-loader
 ```
+
 * Update your `webpack.config.js` file
 ```js
 const webpack = require('webpack');
@@ -25,8 +26,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      Vue: ['vue/dist/vue.esm.js', 'default'],
+    new webpack.ProvidePlugin({     
       jQuery: jQueryPath,
       $: jQueryPath,
       'window.jQuery': jQueryPath,

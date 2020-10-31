@@ -10,6 +10,14 @@ Vue.js component for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG ed
 
 ## [Demo](https://ankurk91.github.io/vue-trumbowyg/) or [JSFiddle](https://jsfiddle.net/ankurk91/p7xs2jkk/)
 
+
+### Version matrix
+
+| Vue.js version | Package version | Branch          |
+| :---           | :---:           | ---:           | 
+| 2.x            | 3.x             | [3.x](https://github.com/ankurk91/vue-trumbowyg/tree/3.x) |
+| 3.x            | 4.x             | master          |
+
 ## Installation
 ```bash
 # yarn
@@ -20,7 +28,7 @@ npm install vue-trumbowyg
 ```
 
 ## Features
-* Reactive ``v-model`` value
+* Reactive `v-model` value
     - You can change editor value programmatically 
 * Emits all possible [events](https://alex-d.github.io/Trumbowyg/documentation/#events)   
 * Supports most [plugins](https://alex-d.github.io/Trumbowyg/documentation/plugins/)
@@ -103,7 +111,7 @@ The component accepts these props:
 <script src="https://cdn.jsdelivr.net/npm/vue-trumbowyg@4"></script><
 <script>
   // Initialize as global component
-  app.component('Trumbowyg', VueTrumbowyg.default);
+  yourAppInstance.component('Trumbowyg', VueTrumbowyg.default);
 </script>
 ```
 

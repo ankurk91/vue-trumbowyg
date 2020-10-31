@@ -8,8 +8,7 @@ const jQueryPath = 'jquery/dist/jquery.js';
 module.exports = {
   configureWebpack: {
     plugins: [
-      new webpack.ProvidePlugin({
-        Vue: ['vue/dist/vue.esm.js', 'default'],
+      new webpack.ProvidePlugin({      
         jQuery: jQueryPath,
         $: jQueryPath,
         'window.jQuery': jQueryPath,
@@ -18,4 +17,4 @@ module.exports = {
   }
 }
 ```
-Restart your dev server with `npm run serve`
+Start your dev server with `npm run serve`
