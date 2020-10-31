@@ -7,9 +7,9 @@
 
 **Tell about your platform**
 * Trumbowyg version : 2.x.x
-* Vue.js version : 2.x.x
+* Vue.js version : 3.x.x
 * Browser name and version : Chrome|Firefox|Safari|Edge x.x.x
-* This package version : 3.x.x
+* This package version : 4.x.x
 
 **Current behavior**
 <!-- Describe how the bug manifests. -->

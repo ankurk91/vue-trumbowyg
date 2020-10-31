@@ -1,36 +1,33 @@
 // Need full jQuery build
 import jQuery from 'jquery';
-
+import {h} from 'vue';
 import 'trumbowyg';
-// You have to import css yourself
 
-// You have to configure webpack to load svg files
+// You may have to configure webpack to load svg files
 import svgIcons from 'trumbowyg/dist/ui/icons.svg';
-
-// https://alex-d.github.io/Trumbowyg/documentation/#events
 import events from './events';
 
 const eventPrefix = 'tbw';
 
 export default {
   name: 'trumbowyg',
-  render(el) {
-    return el('textarea')
+  render() {
+    return h('textarea', {
+      ref: 'root'
+    })
   },
   props: {
-    value: {
+    modelValue: {
       default: null,
       required: true,
       validator(value) {
         return value === null || typeof value === 'string' || value instanceof String
       }
     },
-    // http://alex-d.github.io/Trumbowyg/documentation.html#basic-options
     config: {
       type: Object,
       default: () => ({})
     },
-    // https://alex-d.github.io/Trumbowyg/documentation/#svg-icons
     svgPath: {
       type: [String, Boolean],
       default: svgIcons,
@@ -53,12 +50,12 @@ export default {
     if (this.el) return;
 
     // Store DOM
-    this.el = jQuery(this.$el);
+   this.el = jQuery(this.$refs.root);
 
     // Init editor with config
     this.el.trumbowyg(jQuery.extend(true, {}, {svgPath: this.svgPath}, this.config));
     // Set initial value
-    this.el.trumbowyg('html', this.value);
+    this.el.trumbowyg('html', this.modelValue);
 
     // Watch for further changes
     this.el.on(`${eventPrefix}change`, this.onChange);
@@ -78,7 +75,7 @@ export default {
      *
      * @param newValue String
      */
-    value(newValue) {
+    modelValue(newValue) {
       if (!this.el) return;
       // Prevent multiple input events
       if (newValue === this.el.trumbowyg('html')) return;
@@ -94,12 +91,12 @@ export default {
     /**
      * Emit input event with current editor value
      * This will update v-model on parent component
-     * This method gets called when value gets changed by editor itself
+     * This method gets called when value gets changed by the editor itself
      *
      * @param event
      */
     onChange(event) {
-      this.$emit('input', event.target.value);
+      this.$emit('update:modelValue', event.target.value);
     },
 
     /**
@@ -130,7 +127,7 @@ export default {
   /**
    * Release memory
    */
-  beforeDestroy() {
+  beforeUnmount() {
     if (!this.el) return;
 
     this.el.trumbowyg('destroy');

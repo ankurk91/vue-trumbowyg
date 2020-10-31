@@ -4,10 +4,12 @@
       "@babel/preset-env",
       {
         "modules": false,
-        "forceAllTransforms": true,
+        "forceAllTransforms": false,
         "targets": {
           "browsers": [
-            "defaults"
+            "defaults",
+            "not dead",
+            "not ie 11"
           ]
         }
       }

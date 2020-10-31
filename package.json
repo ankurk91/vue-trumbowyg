@@ -1,6 +1,6 @@
 {
   "name": "vue-trumbowyg",
-  "version": "3.6.2",
+  "version": "4.0.0",
   "description": "Vue.js component for trumbowyg WYSIWYG editor",
   "main": "dist/vue-trumbowyg.js",
   "browser": "dist/vue-trumbowyg.min.js",
@@ -40,6 +40,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
+    "@vue/compiler-sfc": "^3.0.2",
     "babel-loader": "^8.1.0",
     "bootstrap": "^4.5.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -50,18 +51,16 @@
     "mini-css-extract-plugin": "^0.9.0",
     "style-loader": "^1.2.1",
     "unminified-webpack-plugin": "^2.0.0",
-    "vue": "^2.6.11",
-    "vue-loader": "^15.9.3",
-    "vue-template-compiler": "^2.6.11",
+    "vue": "^3.0",
+    "vue-loader": "^16.0.0-beta.9",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
   "peerDependencies": {
-    "vue": "^2.0.0"
+    "vue": "^3.0.0"
   },
   "engines": {
-    "node": ">= 6.9.0",
-    "npm": ">= 3.10.8"
+    "node": ">= 10.13.0"
   }
 }

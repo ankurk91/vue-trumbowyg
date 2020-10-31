@@ -73,8 +73,6 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-
   import Trumbowyg from '../src/index.js';
   import 'trumbowyg/dist/ui/trumbowyg.min.css';
 

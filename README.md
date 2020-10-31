@@ -27,7 +27,8 @@ npm install vue-trumbowyg
 * Works with validation libraries like - [vee-validate](https://github.com/logaretm/vee-validate) 
 
 ## Requirements
-* jQuery >=1.8 
+* jQuery >=1.8
+* Vue v3.x 
     
 ## Usage
 ```html
@@ -66,7 +67,7 @@ npm install vue-trumbowyg
   import Vue from 'vue';
   import VueTrumbowyg from 'vue-trumbowyg';
   import 'trumbowyg/dist/ui/trumbowyg.css';
-  Vue.use(VueTrumbowyg);
+  app.use(VueTrumbowyg);
 ```
 This will register a global component `<trumbowyg>` 
 
@@ -82,7 +83,7 @@ The component accepts these props:
 
 | Attribute       | Type               | Default               | Description      |
 | :---            |  :---:             | :---:                 | :---             |
-| v-model / value | String / null      | `null`                | Set or Get editor value (required)|
+| v-model         | String / null      | `null`                | Set or Get editor value (required)|
 | disabled        | Boolean            | `false`               | Enable/disable editor |
 | config          | Object             | `{}`                  | Editor configuration [options](http://alex-d.github.io/Trumbowyg/documentation.html)|
 | svg-path        | String, Boolean    | `import 'trumbowyg/dist/ui/icons.svg'`   | Set [custom](https://alex-d.github.io/Trumbowyg/documentation/#svg-icons) svg icon file URL|
@@ -97,12 +98,12 @@ The component accepts these props:
 <link href="https://cdn.jsdelivr.net/npm/trumbowyg@2/dist/ui/trumbowyg.min.css" rel="stylesheet">
 
 <!-- Vue js -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <!-- Lastly add this package -->
-<script src="https://cdn.jsdelivr.net/npm/vue-trumbowyg@3"></script><
+<script src="https://cdn.jsdelivr.net/npm/vue-trumbowyg@4"></script><
 <script>
   // Initialize as global component
-  Vue.component('Trumbowyg', VueTrumbowyg.default);
+  app.component('Trumbowyg', VueTrumbowyg.default);
 </script>
 ```
 
